@@ -1,7 +1,23 @@
+<style>
+  .title {
+    background-color: green;
+    color: white;
+    text-align: center;
+    border: 3px outset white;
+  }
+</style>
+<style type="text/css">
+  body {background: lightblue !important;}
+</style>
 <p id="notice"><%= notice %></p>
 
-<div class="container" sytle="border:3px outset black;">
+<div class='title'>
+  <h1> Match Details </h1>
+</div>
 
+<br>
+
+<div style="container">
   <p>
     <strong>Opponent:</strong>
     <%= @match.opponent %>
@@ -22,7 +38,7 @@
     <%= @match.notes %>
   </p>
 
-  <%= link_to 'Edit', edit_match_path(@match) %> |
-  <%= link_to 'Back', matches_path %>
+  <div class='btn-group'><%= link_to 'Edit', edit_match_path(@match), :class => "btn btn-outline-primary" %></div> |
+  <div class='btn-group'><%= link_to 'Back', matches_path, :class => "btn btn-outline-primary" %> </div>
 
 </div>
