@@ -1,6 +1,20 @@
-<h1>Editing Match</h1>
+<style>
+  .title {
+    background-color: green;
+    color: white;
+    text-align: center;
+    border: 3px outset white;
+  }
+</style>
+<style type="text/css">
+  body {background: lightblue !important;}
+</style>
+
+<div class='title'>
+    <h1>Editing Match</h1>
+</div>
 
 <%= render 'form', match: @match %>
 
-<%= link_to 'Show', @match %> |
-<%= link_to 'Back', matches_path %>
+<div class='btn-group'><%= link_to 'Show', @match, :class => "btn btn-outline-primary" %></div> |
+<div class='btn-group'><%= link_to 'Back', matches_path, :class => "btn btn-outline-primary" %></div>
