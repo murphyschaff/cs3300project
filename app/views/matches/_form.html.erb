@@ -10,28 +10,33 @@
       </ul>
     </div>
   <% end %>
+<div class='container' style='text-align:center'>
+    <div class="field">
+      <%= form.label :opponent, :style => "font-size: 150%" %>
+      <br>
+      <%= form.text_field :opponent %>
+    </div>
 
-  <div class="field">
-    <%= form.label :opponent %>
-    <%= form.text_field :opponent %>
-  </div>
+    <div class="field">
+      <%= form.label :score, :style => "font-size: 150%" %>
+      <br>
+      <%= form.number_field :score %>
+    </div>
 
-  <div class="field">
-    <%= form.label :score %>
-    <%= form.number_field :score %>
-  </div>
+    <div class="field">
+      <%= form.label :location, :style => "font-size: 150%" %>
+      <br>
+      <%= form.text_area :location %>
+    </div>
 
-  <div class="field">
-    <%= form.label :location %>
-    <%= form.text_area :location %>
-  </div>
+    <div class="field">
+      <%= form.label :notes, :style => "font-size: 150%" %>
+      <br>
+      <%= form.text_area :notes %>
+    </div>
 
-  <div class="field">
-    <%= form.label :notes %>
-    <%= form.text_area :notes %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
+    <div class="actions">
+      <%= form.submit %>
+    </div>
   </div>
 <% end %>
