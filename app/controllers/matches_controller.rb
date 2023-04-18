@@ -1,6 +1,6 @@
 class MatchesController < ApplicationController
   before_action :set_match, only: %i[ show edit update destroy ]
-
+  before_action :authenticate_user!, only: %i[ new edit create update destroy]
   # GET /matches or /matches.json
   def index
     @matches = Match.all
