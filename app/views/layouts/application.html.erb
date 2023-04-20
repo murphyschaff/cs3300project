@@ -9,19 +9,33 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
+  <style>
+    .title {
+      color: white;
+      font_size: 300%;
+    }
+
+  </style>
+<style type="text/css">
+  body {background: lightblue !important;}
+</style>
+
   <body>
-  <p class="navbar-text float-right">
-  <% if user_signed_in? %>
-    Logged in as <strong><%= current_user.email %></strong>.
-    <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
-    <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-  <% else %>
-    <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
-    <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
-  <% end %>
-  </p>
-  <p class="notice"><%= notice %></p> 
-  <p class="alert"><%= alert %></p> 
+  <nav class='navbar' style ="background-color: green;">
+    <div class="nav navbar-nav navbar-center">
+      <a class="navbar-brand mb-0 title" href="#">Tennis Matches</a>
+    </div>
+      <div class="float-right">
+      <% if user_signed_in? %>
+        Logged in as <strong><%= current_user.email %></strong>.
+        <div class='btn-group'> <%= link_to 'Edit profile', edit_user_registration_path, :class => "btn btn-dark" %> </div> |
+        <div class='btn-group'> <%= link_to 'Logout', destroy_user_session_path, :class => "btn btn-dark" %> </div>
+      <% else %>
+        <div class='btn-group'> <%= link_to "Sign up", new_user_registration_path, :class => "btn btn-dark" %> </div> |
+        <div class='btn-group'> <%= link_to "Login", new_user_session_path, :class => "btn btn-dark" %> </div>
+      <% end %>
+      </div>
+  </nav>
     <%= yield %>
   </body>
 </html>
