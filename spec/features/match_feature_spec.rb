@@ -4,6 +4,8 @@ RSpec.feature "Matches", type: :feature do
     context "Update match" do
       let(:match) { Match.create(opponent: "dude", score: 12, location: "denver", notes: "hi") }
       before(:each) do
+        user = FactoryBot.create(:user)
+        login_as(user)
         visit edit_match_path(match)
       end
       
@@ -64,7 +66,9 @@ RSpec.feature "Matches", type: :feature do
 
     context "Create Match" do
         before(:each) do
-            visit new_match_path
+          user = FactoryBot.create(:user)
+          login_as(user)
+          visit new_match_path
         end
 
         scenario "Match was succesfully created" do
