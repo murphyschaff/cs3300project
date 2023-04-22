@@ -37,7 +37,7 @@
           1,
           null,
           1,
-          6,
+          7,
           null,
           null,
           null,
@@ -46,7 +46,7 @@
           null,
           null,
           1,
-          4,
+          5,
           null,
           null,
           null,
@@ -55,12 +55,12 @@
           null,
           null,
           1,
-          4,
+          5,
           null,
-          4,
+          5,
+          5,
           4,
           2,
-          1,
           null,
           6,
           3,
@@ -94,12 +94,12 @@
           1,
           null,
           1,
-          16,
+          17,
           null,
           null,
           null,
           1,
-          10,
+          11,
           null,
           null
         ]
@@ -119,65 +119,20 @@
           null
         ]
       },
-      "/root/cs3300project/app/channels/application_cable/channel.rb": {
-        "lines": [
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/root/cs3300project/app/channels/application_cable/connection.rb": {
-        "lines": [
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/root/cs3300project/app/jobs/application_job.rb": {
-        "lines": [
-          0,
-          null,
-          null,
-          null,
-          null,
-          null,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/root/cs3300project/app/mailers/application_mailer.rb": {
-        "lines": [
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
       "/root/cs3300project/app/models/ability.rb": {
         "lines": [
           null,
           null,
-          0,
-          0,
+          1,
+          1,
           null,
-          0,
-          0,
+          1,
+          1,
           null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
+          1,
+          1,
+          1,
+          1,
           null,
           null,
           null,
@@ -201,13 +156,48 @@
           null,
           null,
           null,
-          0,
-          0
-        ],
-        "branches": {
-        }
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/root/cs3300project/app/channels/application_cable/channel.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/root/cs3300project/app/channels/application_cable/connection.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/root/cs3300project/app/jobs/application_job.rb": {
+        "lines": [
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/root/cs3300project/app/mailers/application_mailer.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null
+        ]
       }
     },
-    "timestamp": 1682193996
+    "timestamp": 1682195606
   }
 }

@@ -16,7 +16,7 @@ RSpec.feature "Matches", type: :feature do
 
 
     scenario "should log in" do
-      user = FactoryBot.create(:user)
+      user = FactoryBot.create(:user, :normal)
       login_as(user)
       visit root_path
       expect(page).to have_content("Logged in")
@@ -26,7 +26,7 @@ RSpec.feature "Matches", type: :feature do
     context "Update match" do
       let(:match) { Match.create(opponent: "dude", score: 12, location: "denver", notes: "hi") }
       before(:each) do
-        user = FactoryBot.create(:user)
+        user = FactoryBot.create(:user, :normal)
         login_as(user)
         visit edit_match_path(match)
       end
@@ -88,7 +88,7 @@ RSpec.feature "Matches", type: :feature do
 
     context "Create Match" do
         before(:each) do
-          user = FactoryBot.create(:user)
+          user = FactoryBot.create(:user, :normal)
           login_as(user)
           visit new_match_path
         end
@@ -135,7 +135,37 @@ RSpec.feature "Matches", type: :feature do
             expect(page).to have_content("Location can't be blank")
         end
     
-    end    
+    end
+    
+    context "Admin role" do
+      before(:each) do
+        admin = FactoryBot.create(:user, :admin)
+        login_as(admin)
+      end
+
+      scenario "Match was succesfully created" do
+        visit new_match_path
+        within("form") do
+          fill_in "Opponent", with: "dave"
+          fill_in "Score", with: 12
+          fill_in "Location", with: "denver"
+          fill_in "Notes", with: "notes"
+        end
+        click_button "Create Match"
+        expect(page).to have_content("Match was successfully created.")
+      end
+
+      scenario "has dashboard button" do
+        visit root_path
+        expect(page).to have_content("Admin Dashboard")
+      end
+      
+      scenario "can visit dashboard" do
+        visit rails_admin_path
+        expect(page).to have_content("Site Administration")
+      end
+    end
+
 end
  
 

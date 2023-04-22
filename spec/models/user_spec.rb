@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe User, type: :model do
   describe User do
     before(:each) do
-      @user = FactoryBot.build(:user)
+      @user = FactoryBot.build(:user, :normal)
     end
     describe 'New user registration' do
       context 'When new registration is successful' do
