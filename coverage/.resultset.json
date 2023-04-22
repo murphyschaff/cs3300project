@@ -107,6 +107,8 @@
       "/root/cs3300project/app/controllers/application_controller.rb": {
         "lines": [
           1,
+          1,
+          1,
           null
         ]
       },
@@ -159,8 +161,53 @@
         ],
         "branches": {
         }
+      },
+      "/root/cs3300project/app/models/ability.rb": {
+        "lines": [
+          null,
+          null,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          0,
+          0
+        ],
+        "branches": {
+        }
       }
     },
-    "timestamp": 1682107803
+    "timestamp": 1682193996
   }
 }

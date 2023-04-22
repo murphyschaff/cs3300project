@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_04_18_220702) do
+ActiveRecord::Schema.define(version: 2023_04_22_195730) do
 
   create_table "matches", force: :cascade do |t|
     t.string "opponent"
@@ -29,6 +29,8 @@ ActiveRecord::Schema.define(version: 2023_04_18_220702) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.boolean "admin_role", default: false
+    t.boolean "user_role", default: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

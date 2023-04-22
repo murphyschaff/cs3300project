@@ -28,6 +28,9 @@
       <div class="float-right">
       <% if user_signed_in? %>
         Logged in as <strong><%= current_user.email %></strong>.
+        <% if current_user.admin_role %>
+          <div class='btn-group'> <%= link_to "Admin Dashboard", rails_admin_path, :class => "btn btn-dark" %> </div>
+        <% end %>
         <div class='btn-group'> <%= link_to 'Edit profile', edit_user_registration_path, :class => "btn btn-dark" %> </div> |
         <div class='btn-group'> <%= link_to 'Logout', destroy_user_session_path, method: :delete, :class => "btn btn-dark" %> </div>
       <% else %>
